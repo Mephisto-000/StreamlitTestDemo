@@ -37,7 +37,7 @@ def main():
     
     # 右側圖表：平均相似度比例的變化圖
     ax2 = fig.add_subplot(122)
-    ax2.set_xlabel("Iterations (迭代次數)")
+    ax2.set_xlabel("Iterations")
     ax2.set_xlim([0, n_iterations])
     ax2.set_ylim([0.4, 1])
     ax2.set_title("Mean Similarity Ratio", fontsize=15)
