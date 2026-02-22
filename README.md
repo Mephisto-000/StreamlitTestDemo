@@ -16,6 +16,12 @@
   - ($N_{similar}$ 為同種族鄰居數， $N_{t}$  為周圍鄰居總數， $N_{e}$  為周圍的空屋數。分母即為「實際擁有居民的鄰居數」)
 - **模擬迭代次數 (Number of Iterations)**：設定需要模擬運行的總回合數。
 
+### 城市的平均相似度比例 (Average Similarity Ratio)
+除了觀察個別居民是否搬遷，模型也會計算整個城市的「平均相似度比例」來量化整體的隔離程度。
+這是在每一次迭代中，將所有居民的「實際相似度」加總後，除以城市中的總居民數。
+
+- **公式：** $City\_S_{ratio} = \frac{\sum_{i=1}^{N_{pop}} S_{ratio}^{(i)}}{N_{pop}}$
+- ($N_{pop}$ 為城市中擁有居民的房屋總數，$S_{ratio}^{(i)}$ 為第 $i$ 個居民的實際相似度)
 ## 參考來源
 
 本專案的 Python 實作與 Streamlit 介面邏輯，主要參考自 Adil Moujahid 的文章： [An Implementation of Schelling Segregation Model using Python and Streamlit](https://adilmoujahid.com/posts/2020/05/streamlit-python-schelling/)
