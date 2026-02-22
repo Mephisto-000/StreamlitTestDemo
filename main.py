@@ -8,7 +8,7 @@ from SchellingModel import Schelling
 def main():
 
     st.set_page_config(layout="wide")
-    st.title("Schelling's Model of Segregation")
+    st.markdown("<h1 style='text-align: center;'>Schelling's Model of Segregation</h1>", unsafe_allow_html=True)
 
     # 側邊欄：設定 Schelling 模型的參數
     population_size = st.sidebar.slider("Population Size", 500, 10000, 2500)
