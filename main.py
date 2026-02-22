@@ -8,13 +8,13 @@ from SchellingModel import Schelling
 def main():
 
     st.set_page_config(layout="wide")
-    st.title("Schelling's Model of Segregation (謝林隔離模型)")
+    st.title("Schelling's Model of Segregation")
 
     # 側邊欄：設定 Schelling 模型的參數
-    population_size = st.sidebar.slider("Population Size (人口總數)", 500, 10000, 2500)
-    empty_ratio = st.sidebar.slider("Empty Houses Ratio (空屋比例)", 0., 1., .2)
-    similarity_threshold = st.sidebar.slider("Similarity Threshold (相似度門檻)", 0., 1., .4)
-    n_iterations = st.sidebar.number_input("Number of Iterations (模擬迭代次數)", 50)
+    population_size = st.sidebar.slider("Population Size", 500, 10000, 2500)
+    empty_ratio = st.sidebar.slider("Empty Houses Ratio", 0., 1., .2)
+    similarity_threshold = st.sidebar.slider("Similarity Threshold", 0., 1., .4)
+    n_iterations = st.sidebar.number_input("Number of Iterations", 50)
 
     # 初始化 Schelling 模型
     schelling = Schelling(population_size, empty_ratio, similarity_threshold, 3)
@@ -22,9 +22,6 @@ def main():
     mean_similarity_ratio.append(schelling.get_mean_similarity_ratio())
 
     plt.style.use("ggplot")
-    
-    # 設定字體以支援繁體中文顯示
-    plt.rcParams['font.sans-serif'] = ['PingFang HK', 'Heiti TC', 'Arial Unicode MS', 'sans-serif']
     plt.rcParams['axes.unicode_minus'] = False
     
     fig = plt.figure(figsize=(14, 6))
@@ -47,7 +44,7 @@ def main():
 
     progress_bar = st.progress(0)
 
-    if st.sidebar.button('Run Simulation (執行模擬)'):
+    if st.sidebar.button('Run Simulation'):
         for i in range(int(n_iterations)):
             schelling.run()
             mean_similarity_ratio.append(schelling.get_mean_similarity_ratio())
