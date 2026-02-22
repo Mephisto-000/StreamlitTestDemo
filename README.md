@@ -18,8 +18,7 @@
 
 ## 參考來源
 
-本專案的 Python 實作與 Streamlit 介面邏輯，主要參考自 Adil Moujahid 的優質教學文章：
-👉 [An Implementation of Schelling Segregation Model using Python and Streamlit](https://adilmoujahid.com/posts/2020/05/streamlit-python-schelling/)
+本專案的 Python 實作與 Streamlit 介面邏輯，主要參考自 Adil Moujahid 的文章： [An Implementation of Schelling Segregation Model using Python and Streamlit](https://adilmoujahid.com/posts/2020/05/streamlit-python-schelling/)
 
 ## 如何在本地執行
 
